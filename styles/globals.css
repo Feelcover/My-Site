@@ -77,7 +77,6 @@ a {
   margin: 0 auto;
 }
 
-
 .subContainer {
   max-width: 1174px;
   padding: 0 17px;
@@ -88,23 +87,20 @@ a {
   overflow: hidden;
 }
 
-
-.background-animation {
+.backgroundAnimation {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   z-index: -100;
-  background-color: #0F1839;
-  /*   background-size: cover; */
-  /*   background-repeat: no-repeat; */
+  background-color: #0f1839;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
-#ball-one:active,
-#ball-two:active {
+#ballOne:active,
+#ballTwo:active {
   -webkit-filter: blur(120px);
   -moz-filter: blur(120px);
   -o-filter: blur(120px);
@@ -112,8 +108,13 @@ a {
   filter: blur(120px);
 }
 
-#ball-one {
-  background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
+#ballOne {
+  background: radial-gradient(
+    142.65% 2282.99% at 100% -31.65%,
+    #08a6ce 0%,
+    #6352b1 43.75%,
+    #8b0eb7 68.75%
+  );
   height: 150px;
   width: 150px;
   position: absolute;
@@ -130,8 +131,13 @@ a {
   -webkit-animation: move1 5s infinite;
 }
 
-#ball-two {
-  background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
+#ballTwo {
+  background: radial-gradient(
+    142.65% 2282.99% at 100% -31.65%,
+    #08a6ce 0%,
+    #6352b1 43.75%,
+    #8b0eb7 68.75%
+  );
   height: 100px;
   width: 100px;
   position: absolute;
@@ -144,12 +150,17 @@ a {
   -o-filter: blur(70px);
   -ms-filter: blur(70px);
   filter: blur(70px);
-  animation: move2 5s infinite;
+  animation: move2 15s infinite;
   -webkit-animation: move2 5s infinite;
 }
 
-#ball-three {
-  background: radial-gradient(142.65% 2282.99% at 100% -31.65%, #08A6CE 0%, #6352B1 43.75%, #8B0EB7 68.75%);
+#ballThree {
+  background: radial-gradient(
+    142.65% 2282.99% at 100% -31.65%,
+    #08a6ce 0%,
+    #6352b1 43.75%,
+    #8b0eb7 68.75%
+  );
   height: 100px;
   width: 100px;
   left: 100px;
