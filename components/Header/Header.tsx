@@ -8,8 +8,8 @@ const Header = () => {
   const offset = 140;
   const duration = 500;
   return (
-    <header>
-      <div className={`"container" ${styles.headerContainer}`}>
+    <header className={styles.header}>
+      <div className={`container ${styles.header__container}`}>
         <Logo />
       </div>
       <nav className={styles.header__nav}>
@@ -25,6 +25,45 @@ const Header = () => {
               duration={duration}
             >
               Обо мне
+            </Link>
+          </li>
+          <li className={styles.header__nav__list__item}>
+            <Link
+              className={styles.header__nav__list__item__link}
+              href="/"
+              to="about"
+              spy={spy}
+              smooth={smooth}
+              offset={offset}
+              duration={duration}
+            >
+              Навыки
+            </Link>
+          </li>
+          <li className={styles.header__nav__list__item}>
+            <Link
+              className={styles.header__nav__list__item__link}
+              href="/"
+              to="about"
+              spy={spy}
+              smooth={smooth}
+              offset={offset}
+              duration={duration}
+            >
+              Портфолио
+            </Link>
+          </li>
+          <li className={styles.header__nav__list__item}>
+            <Link
+              className={styles.header__nav__list__item__link}
+              href="/"
+              to="about"
+              spy={spy}
+              smooth={smooth}
+              offset={offset}
+              duration={duration}
+            >
+              Обратная связь
             </Link>
           </li>
         </ul>
