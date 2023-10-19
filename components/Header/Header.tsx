@@ -1,8 +1,8 @@
 import { useMediaQuery } from "@/hooks";
 import { useState } from "react";
 import { Link } from "react-scroll";
-import styles from "../../styles/Header.module.scss";
-import stylesMenu from "../../styles/MobileMenu.module.scss";
+import styles from "./Header.module.scss";
+import stylesMenu from "./HeaderMobileMenu.module.scss";
 import Logo from "../Logo/Logo";
 
 const Header = () => {
