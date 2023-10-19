@@ -25,5 +25,7 @@
     "react-spinners": "^0.13.8",
     "sass": "^1.69.4",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
   }
 }
