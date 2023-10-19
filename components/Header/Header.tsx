@@ -2,11 +2,13 @@ import { useMediaQuery } from "@/hooks";
 import { useState } from "react";
 import { Link } from "react-scroll";
 import styles from "../../styles/Header.module.scss";
+import stylesMenu from "../../styles/MobileMenu.module.scss";
 import Logo from "../Logo/Logo";
 
 const Header = () => {
   const [burgerOpen, setBurgerOpen] = useState(false);
   const isMobile = useMediaQuery(640);
+  const currentMenuItemClass = isMobile ? stylesMenu.menu__item : styles.header__nav__list__item;
   const spy = true;
   const smooth = true;
   const offset = 140;
@@ -31,7 +33,7 @@ const Header = () => {
         <Logo />
         {isMobile && (
           <button
-            className={`${styles.burgerMenu} ${burgerOpen ? styles.open : ""}`}
+            className={`${styles.burgerMenu} ${burgerOpen && styles.open}`}
             onClick={handleToggleBurger}
           >
             <span />
@@ -39,9 +41,9 @@ const Header = () => {
             <span />
           </button>
         )}
-        <nav className={styles.header__nav}>
-          <ul className={styles.header__nav__list}>
-            <li className={styles.header__nav__list__item}>
+        <nav className={`${isMobile ? stylesMenu.menu : styles.header__nav} ${burgerOpen && stylesMenu.open}`}>
+          <ul className={`${isMobile ? styles.listReset : styles.header__nav__list}`}>
+            <li className={currentMenuItemClass}>
               <Link
                 className={styles.header__nav__list__item__link}
                 href="/"
@@ -54,7 +56,7 @@ const Header = () => {
                 Обо мне
               </Link>
             </li>
-            <li className={styles.header__nav__list__item}>
+            <li className={currentMenuItemClass}>
               <Link
                 className={styles.header__nav__list__item__link}
                 href="/"
@@ -67,7 +69,7 @@ const Header = () => {
                 Навыки
               </Link>
             </li>
-            <li className={styles.header__nav__list__item}>
+            <li className={currentMenuItemClass}>
               <Link
                 className={styles.header__nav__list__item__link}
                 href="/"
@@ -80,7 +82,7 @@ const Header = () => {
                 Портфолио
               </Link>
             </li>
-            <li className={styles.header__nav__list__item}>
+            <li className={currentMenuItemClass}>
               <Link
                 className={styles.header__nav__list__item__link}
                 href="/"
