@@ -62,8 +62,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -77,10 +77,27 @@ a {
   margin: 0 auto;
 }
 
+
 .subContainer {
   max-width: 1174px;
   padding: 0 17px;
   margin: 0 auto;
+}
+
+@media screen and (max-width:1080px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .subContainer {
+    max-width: 833px;
+  }
+}
+
+@media screen and (max-width:1080px) {
+  .container, .subContainer {
+    padding: 0 25px;
+  }
 }
 
 .overflowHidden {

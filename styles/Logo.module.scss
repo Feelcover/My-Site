@@ -1,4 +1,10 @@
-.logo{
-    width: 85px;
-    height: 40px;
+.logo {
+  width: 85px;
+  height: 40px;
+  cursor: pointer;
+
+  @media screen and (max-width: 800px) {
+    width: 64px;
+    height: 30px;
+  }
 }
