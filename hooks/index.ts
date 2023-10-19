@@ -33,7 +33,7 @@ export const useMediaQuery = (maxWidth: number) => {
     } else {
         setIsMedia(false)
     }
-  }, [handleResize, maxWidth, windowWidth]);
+  }, [maxWidth, windowWidth]);
 
   return isMedia;
 };

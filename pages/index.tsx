@@ -17,16 +17,13 @@ export default function Home() {
           href="/images/logo.svg"
         />
       </Head>
-      <Header/>
-      <main>
-
-      </main>
+      <Header />
+      <main></main>
       <div className="backgroundAnimation">
         <div id="ballOne"></div>
         <div id="ballTwo"></div>
         <div id="ballThree"></div>
       </div>
-      
     </>
   );
 }
