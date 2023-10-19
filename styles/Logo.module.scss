@@ -7,4 +7,9 @@
     width: 64px;
     height: 30px;
   }
+
+  
+  @media screen and (max-width: 640px) {
+    height: 40px;
+  }
 }

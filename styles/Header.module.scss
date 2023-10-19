@@ -14,6 +14,10 @@
     padding: 24px 0;
   }
 
+  @media screen and (max-width: 800px) {
+    padding: 20px 0;
+  }
+
   &__container {
     position: relative;
     display: flex;
@@ -128,6 +132,10 @@
 
 .burgerMenu.open span:nth-child(2) {
   opacity: 0;
+
+  @media all and (max-width: 485px) {
+    top: 17px;
+}
 }
 
 .burgerMenu.open span:nth-child(3) {
