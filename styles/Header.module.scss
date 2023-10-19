@@ -8,9 +8,7 @@
   z-index: 1;
   background: rgba(21, 36, 72, 0.2);
   backdrop-filter: blur(125px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
 
   @media screen and (max-width: 800px) {
     padding: 24px 0;
@@ -18,6 +16,9 @@
 
   &__container {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__nav {
@@ -71,4 +72,65 @@
       }
     }
   }
+}
+
+.burgerMenu {
+  margin: 0;
+  padding: 0;
+  width: 64px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+
+
+  @media all and (max-width: 485px) {
+      height: 40px;
+  }
+}
+
+.burgerMenu span {
+  background-color: #06CAF9;
+  position: absolute;
+  border-radius: 2px;
+  width: 100%;
+  height: 5px;
+  transition-duration: 500ms;
+  transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+
+.burgerMenu span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.burgerMenu span:nth-child(2) {
+  top: 13px;
+  left: 0;
+  opacity: 1;
+
+  @media all and (max-width: 485px) {
+      top: 17px;
+  }
+}
+
+.burgerMenu span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.burgerMenu.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 13px;
+}
+
+.burgerMenu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerMenu.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 13px;
 }
