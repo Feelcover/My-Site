@@ -1,4 +1,5 @@
 import Header from "@/components/Header/Header";
+import Hero from "@/components/Hero/Hero";
 import Head from "next/head";
 
 export default function Home() {
@@ -17,7 +18,9 @@ export default function Home() {
         />
       </Head>
       <Header />
-      <main></main>
+      <main>
+        <Hero/>
+      </main>
       <div className="backgroundAnimation">
         <div id="ballOne"></div>
         <div id="ballTwo"></div>

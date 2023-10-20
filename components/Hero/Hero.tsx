@@ -6,7 +6,7 @@ import styles from "./Hero.module.scss";
 const Hero = () => {
   const isMobile = useMediaQuery(800)
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} style={{backgroundImage: `url('/images/hero-bg.jpg')`}}>
       <div className="subContainer">
         <div className={styles.hero__inner}>
           <h1 className={styles.hero__title}>Web Development</h1>
@@ -32,6 +32,7 @@ const Hero = () => {
             duration={500}
             className={styles.hero__arrow}
           />}
+          
         </div>
       </div>
     </section>
