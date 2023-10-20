@@ -4,9 +4,12 @@ import { Link } from "react-scroll";
 import styles from "./Hero.module.scss";
 
 const Hero = () => {
-  const isMobile = useMediaQuery(800)
+  const isMobile = useMediaQuery(800);
   return (
-    <section className={styles.hero} style={{backgroundImage: `url('/images/hero-bg.jpg')`}}>
+    <section
+      className={styles.hero}
+      style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
+    >
       <div className="subContainer">
         <div className={styles.hero__inner}>
           <h1 className={styles.hero__title}>Web Development</h1>
@@ -24,15 +27,16 @@ const Hero = () => {
           >
             Связаться со разработчиком
           </Link>
-          {!isMobile && <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={30}
-            duration={500}
-            className={styles.hero__arrow}
-          />}
-          
+          {!isMobile && (
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={30}
+              duration={500}
+              className={styles.hero__arrow}
+            />
+          )}
         </div>
       </div>
     </section>
