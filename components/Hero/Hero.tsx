@@ -55,10 +55,13 @@ const Hero = () => {
           <h1 className={styles.hero__title} ref={title}>
             Web Development
           </h1>
-          <p className={styles.hero__description}>
-            Вы работаете над чем-то великим? Я с удовольствием помогу вам в
-            этом! Напишите мне письмо и мы начнем проект прямо сейчас!
-          </p>
+          <div className={styles.hero__description}>
+            <p>Вы работаете над чем-то великим?</p>
+            <p>
+              Я с удовольствием помогу вам в этом! Напишите мне письмо и мы
+              начнем проект прямо сейчас!
+            </p>
+          </div>
           <Link
             to="contact"
             spy={true}
@@ -67,7 +70,7 @@ const Hero = () => {
             duration={500}
             className={styles.hero__button}
           >
-            Связаться со разработчиком
+            Связаться с разработчиком
           </Link>
           {!isMobile && (
             <Link
