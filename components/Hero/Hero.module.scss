@@ -79,6 +79,8 @@
       #1a46ef 56.36%
     );
     border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.9;
 
     &:hover {
       background: radial-gradient(
@@ -87,6 +89,10 @@
         #6352b1 43.75%,
         #8b0eb7 68.75%
       );
+      opacity: 0.88;
+    }
+    &:active{
+        opacity: 0.6;
     }
 
     @media all and (max-width: 1440px) {
