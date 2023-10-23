@@ -102,7 +102,6 @@
     font-size: 22px;
     color: #f2f2f2;
     padding: 25px 49px;
-
     background: radial-gradient(
       142.65% 2282.99% at 100% -31.65%,
       #08a6ce 0%,
@@ -112,8 +111,16 @@
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
 
+  
+    &::before {
+    background: transparent;
+    }
+
+
     &:hover {
-      opacity: 0.9;
+    background-color: transparent;
+      opacity: 0.88;
+
     }
     &:active {
       opacity: 0.6;

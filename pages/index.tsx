@@ -1,3 +1,4 @@
+import About from "@/components/About/About";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
 import Head from "next/head";
@@ -20,6 +21,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero/>
+        <About/>
       </main>
       <div className="backgroundAnimation">
         <div id="ballOne"></div>

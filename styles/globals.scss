@@ -149,9 +149,9 @@ a {
   -o-filter: blur(70px);
   -ms-filter: blur(70px);
   filter: blur(70px);
-  transition: all 8s;
-  animation: move1 8s infinite;
-  -webkit-animation: move1 8s infinite;
+  transition: all 10s;
+  animation: move1 10s infinite;
+  -webkit-animation: move1 10s infinite;
 }
 
 #ballTwo {
@@ -167,14 +167,14 @@ a {
   top: 50%;
   right: 0;
   border-radius: 100%;
-  transition: all 8s;
+  transition: all 10s;
   -webkit-filter: blur(70px);
   -moz-filter: blur(70px);
   -o-filter: blur(70px);
   -ms-filter: blur(70px);
   filter: blur(70px);
-  animation: move2 8s infinite;
-  -webkit-animation: move2 8s infinite;
+  animation: move2 10s infinite;
+  -webkit-animation: move2 10s infinite;
 }
 
 #ballThree {
@@ -190,14 +190,14 @@ a {
   top: 100px;
   position: absolute;
   border-radius: 100%;
-  transition: all 8s;
+  transition: all 10s;
   -webkit-filter: blur(70px);
   -moz-filter: blur(70px);
   -o-filter: blur(70px);
   -ms-filter: blur(70px);
   filter: blur(70px);
-  animation: move3 8s infinite;
-  -webkit-animation: move3 8s infinite;
+  animation: move3 10s infinite;
+  -webkit-animation: move3 10s infinite;
 }
 
 @keyframes move1 {
@@ -229,7 +229,7 @@ a {
 
   85% {
     transform: translate3d(10vw, 25%, 0);
-    width: 100px;
+    width: 80px;
   }
 
   100% {
