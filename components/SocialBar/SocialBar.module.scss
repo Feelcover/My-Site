@@ -35,6 +35,9 @@
       font-weight: 600;
       font-size: 20px;
       color: #0caed5;
+      text-decoration: underline;
+      
+
 
       @media all and (max-width: 800px) {
         font-size: 18px;
@@ -52,7 +55,7 @@
       }
 
       &:hover &__icon__gh {
-        background-color: rgb(40, 104, 193);
+        background-color: rgba(137, 40, 193, 0.574);
         transition: background-color 0.3s ease-in-out;
       }
 
@@ -66,6 +69,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+        
       }
 
       &__icon {
@@ -102,6 +106,7 @@
 
       &__text {
         margin-left: 10px;
+        
 
         @media all and (max-width: 1080px) {
           margin-right: 10px;

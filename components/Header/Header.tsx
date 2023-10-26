@@ -52,6 +52,7 @@ const Header = () => {
                 smooth={smooth}
                 offset={offset}
                 duration={duration}
+                onClick={handleToggleBurger}
               >
                 Обо мне
               </Link>
@@ -65,6 +66,7 @@ const Header = () => {
                 smooth={smooth}
                 offset={offset}
                 duration={duration}
+                onClick={handleToggleBurger}
               >
                 Навыки
               </Link>
@@ -78,6 +80,7 @@ const Header = () => {
                 smooth={smooth}
                 offset={offset}
                 duration={duration}
+                onClick={handleToggleBurger}
               >
                 Портфолио
               </Link>
@@ -91,6 +94,7 @@ const Header = () => {
                 smooth={smooth}
                 offset={offset}
                 duration={duration}
+                onClick={handleToggleBurger}
               >
                 Обратная связь
               </Link>
