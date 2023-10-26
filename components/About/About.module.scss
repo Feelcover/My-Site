@@ -33,18 +33,21 @@
     }
 
     @media all and (max-width: 630px) {
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
     }
 
     @media all and (max-width: 485px) {
-      padding-top: 0;
-      padding-bottom: 0;
+      
+      padding: 0 5px;
     }
   }
 
   &__img {
     margin-right: 32px;
     width: 552px;
+    transition: all 0.3s ease-in-out;
 
     @media all and (max-width: 1080px) {
       width: 352px;
@@ -57,13 +60,13 @@
 
     @media all and (max-width: 630px) {
       margin-right: 0;
-      width: 289px;
+      width: 280px;
       height: 290px;
       margin-bottom: 24px;
     }
 
     @media all and (max-width: 485px) {
-      width: 290px;
+      width: 280px;
     }
   }
 
@@ -142,6 +145,11 @@
       line-height: 24px;
     }
 
+    @media all and (max-width: 650px) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
     &:last-child() {
       margin-bottom: 54px;
 
@@ -153,5 +161,9 @@
 
   &__social{
     margin-top: 50px;
+
+    &__mobile{
+      margin-left: 5px;
+    }
   }
 }

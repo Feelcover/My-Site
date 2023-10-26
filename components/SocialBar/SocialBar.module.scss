@@ -9,6 +9,7 @@
   @media all and (max-width: 1080px) {
     display: flex;
     align-items: center;
+    justify-content: space-around;
   }
 
   @media all and (max-width: 630px) {
@@ -20,6 +21,10 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+
+    @media all and (max-width: 650px) {
+        margin-bottom: 12px;
+      }
 
 
 
@@ -35,6 +40,7 @@
         font-size: 18px;
       }
 
+
       &:hover &__icon__tg {
         background-color: #4bb3e0;
         transition: background-color 0.3s ease-in-out;
@@ -46,7 +52,7 @@
       }
 
       &:hover &__icon__gh {
-        background-color: #FFF;
+        background-color: rgb(40, 104, 193);
         transition: background-color 0.3s ease-in-out;
       }
 

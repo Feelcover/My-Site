@@ -6,7 +6,8 @@ import SocialBar from "../SocialBar/SocialBar";
 import styles from "./About.module.scss";
 
 const About = () => {
-  const isMobile1080 = useMediaQuery(1080);
+  const isMobile = useMediaQuery(1080);
+  
 
   return (
     <section id="about" className={styles.about}>
@@ -41,12 +42,15 @@ const About = () => {
               <p>В данный момент нахожусь в активном поиске работы.</p>
             </div>
             <div className={styles.about__social}>
-            {!isMobile1080 && <SocialBar />}
+            {!isMobile && <SocialBar />}
             </div>
           </div>
         </div>
         <div className="sub-container">
-                {isMobile1080 && <SocialBar />}
+        <div className={styles.about__social__mobile}>
+                {isMobile && <SocialBar />}
+            </div>
+
             </div>
     </section>
   );
