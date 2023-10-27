@@ -40,7 +40,7 @@ const Portfolio = () => {
       </div>
       <div className="subContainer">
         <div className={styles.portfolio__inner}>
-          <div className={styles.portfolio__inner__wrapper}>
+          <div className={styles.portfolio__tabs}>
             {tabController.map((item) => (
               <PortfolioTab
                 key={item.id}
