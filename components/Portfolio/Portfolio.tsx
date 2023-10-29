@@ -61,7 +61,7 @@ const Portfolio = () => {
             ))}
           </ul>
         </div>
-        {!isMobile &&
+        {!isMobile && (
           <ul className={styles.portfolio__list}>
             {tab.tabAll && <PortfolioTabContent items={portfolioItemsArrAll} />}
             <AnimatePresence>
@@ -70,8 +70,8 @@ const Portfolio = () => {
               )}
             </AnimatePresence>
           </ul>
-        }
-        {!isMobile &&
+        )}
+        {!isMobile && (
           <div className={styles.portfolio__wrapper}>
             <button
               className={styles.portfolio__more}
@@ -83,14 +83,15 @@ const Portfolio = () => {
               <span className={styles.portfolio__more__border} />
             </button>
           </div>
-        }
+        )}
       </div>
-      {isMobile && <div className={styles.portfolio__list__mobile}>
-                    <div className={styles.portfolio__list__mobile__container}>
-                        {tab.tabAll && <PortfolioSlider tabItems={portfolioItemsArrAll} />}
-
-                    </div>
-                </div>}
+      {isMobile && (
+        <div className={styles.portfolio__list__mobile}>
+          <div className={styles.portfolio__list__mobile__container}>
+            {tab.tabAll && <PortfolioSlider tabItems={portfolioItemsArrAll} />}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
