@@ -13,7 +13,6 @@ import PortfolioSlider from "./PortfolioSlider";
 
 const Portfolio = () => {
   const isMobile = useMediaQuery(1080);
-  console.log(isMobile);
 
   const [tab, setTab] = useState({
     tabAll: true,

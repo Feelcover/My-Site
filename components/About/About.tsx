@@ -39,7 +39,7 @@ const About = () => {
               <p>
                 Стэк: JavaScript/TypeScript (ES6+), React, Next, Express/Nest.
               </p>
-              <p>В данный момент нахожусь в активном поиске работы.</p>
+              <p>Нахожусь в поиске работы и заказов.</p>
             </div>
             <div className={styles.about__social}>
             {!isMobile && <SocialBar />}
