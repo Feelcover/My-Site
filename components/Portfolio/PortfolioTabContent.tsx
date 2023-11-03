@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FC } from "react";
+import PortfolioTabItem from "./PortfolioTabItem";
 import styles from "./Portfolio.module.scss";
 
 
@@ -9,18 +10,18 @@ interface IPortfolioTabContentItems {
 
 const PortfolioTabContent: FC<IPortfolioTabContentItems> = ({ items }) => {
   return (
-    <li className={styles.portfolio__list__item}>
+    <>
       {items.map((item) => (
-        <motion.div
+        <motion.li
         initial={{opacity:0}}
         animate={{opacity:1}}
         exit={{opacity:0}}
         key={item.id}
         >
-            
-        </motion.div>
+            <PortfolioTabItem title={item.title} img={item.img} link={item.link} />
+        </motion.li>
       ))}
-    </li>
+    </>
   );
 };
 

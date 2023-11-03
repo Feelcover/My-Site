@@ -147,18 +147,21 @@
         padding: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
         grid-column-gap: 32px;
         grid-row-gap: 61px;
         margin-bottom: 58px;
+        
 
         @media all and (max-width: 1440px) {
-            grid-row-gap: 53px;
+            grid-row-gap: 23px;
         }
 
         &__item {
             &__img {
                 margin-bottom: 32px;
-                width: 100%;
+                width: 555px;
+                height: 422px;
                 object-fit: cover;
                 transition: transform .3s ease-in-out;
 

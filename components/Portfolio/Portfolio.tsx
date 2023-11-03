@@ -1,9 +1,15 @@
+import { hiddenPortfolioItemsArray, portfolioItemsArrAll } from "../../utils/portfolioArr";
 import React, { useState } from "react";
 import MainTitle from "../MainTitile/MainTitle";
-import styles from "./Portfolio.module.scss";
 import PortfolioTab from "./PortfolioTab";
+import PortfolioTabContent from "./PortfolioTabContent";
+import { AnimatePresence } from "framer-motion";
+import { useMediaQuery } from "../../hooks";
+import styles from "./Portfolio.module.scss";
+
 
 const Portfolio = () => {
+  const isMobile = useMediaQuery(1080);
   const [tab, setTab] = useState({
     tabAll: true,
     tabStatic: false,
@@ -40,7 +46,7 @@ const Portfolio = () => {
       </div>
       <div className="subContainer">
         <div className={styles.portfolio__inner}>
-          <div className={styles.portfolio__tabs}>
+          <ul className={styles.portfolio__tabs}>
             {tabController.map((item) => (
               <PortfolioTab
                 key={item.id}
@@ -49,8 +55,22 @@ const Portfolio = () => {
                 handleShowTab={item.handler}
               />
             ))}
-          </div>
+          </ul>
         </div>
+        {!isMobile && <ul className={styles.portfolio__list}>
+                    {tab.tabAll && <PortfolioTabContent items={portfolioItemsArrAll} />}
+                    <AnimatePresence>
+                        {!hiddenAllItems && <PortfolioTabContent items={hiddenPortfolioItemsArray} />}
+                    </AnimatePresence>
+                </ul>}
+                {!isMobile && <div className={styles.portfolio__wrapper}>
+                    <button className={styles.portfolio__more} onClick={toggleHiddenAllItems}>
+                        <span className={styles.portfolio__more__text}>
+                            {!hiddenAllItems ? 'Свернуть': 'Показать еще проекты'}
+                        </span>
+                        <span className={styles.portfolio__more__border} />
+                    </button>
+                </div>}
       </div>
     </section>
   );
