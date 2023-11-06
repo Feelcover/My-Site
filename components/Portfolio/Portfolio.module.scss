@@ -164,6 +164,8 @@
       grid-row-gap: 23px;
     }
 
+
+
     &__item {
       &__img {
         margin-bottom: 32px;
@@ -175,6 +177,15 @@
         &:hover {
           transform: scale(1.01);
           transition: transform 0.3s ease-in-out;
+        }
+
+        @media all and (max-width: 1200px) {
+          width: 455px;
+          height: 322px;
+        }
+        @media all and (max-width: 1000px) {
+          width: 316px;
+          max-height: 195px;
         }
       }
 
@@ -256,6 +267,10 @@
     overflow: hidden;
     width: calc(100% - 24px);
     max-height: 400px;
+
+    @media all and (max-width: 1080px) {
+      max-height: 230px;
+    }
 
     @media all and (max-width: 800px) {
       width: calc(100% - 13px);

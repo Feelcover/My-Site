@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { FC } from "react";
 import PortfolioTabItem from "./PortfolioTabItem";
-import styles from "./Portfolio.module.scss";
 
 
 interface IPortfolioTabContentItems {

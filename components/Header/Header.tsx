@@ -14,18 +14,16 @@ const Header = () => {
   const offset = 140;
   const duration = 500;
 
-  const handleToggleBurger = () => {
+
+  const handleToggleMenu = () => {
+    (document.querySelector('body') as HTMLBodyElement).classList.toggle('overflowHidden');
     setBurgerOpen(!burgerOpen);
-    if (!burgerOpen) {
-      (document.querySelector("body") as HTMLBodyElement).classList.toggle(
-        "overflowHidden"
-      );
-    } else {
-      (document.querySelector("body") as HTMLBodyElement).classList.remove(
-        "overflowHidden"
-      );
-    }
-  };
+}
+
+const closeMenu = () => {
+    (document.querySelector('body') as HTMLBodyElement).classList.remove('overflowHidden');
+    setBurgerOpen(false);
+}
 
   return (
     <header className={styles.header}>
@@ -34,7 +32,7 @@ const Header = () => {
         {isMobile && (
           <button
             className={`${styles.burgerMenu} ${burgerOpen && styles.open}`}
-            onClick={handleToggleBurger}
+            onClick={handleToggleMenu}
           >
             <span />
             <span />
@@ -52,7 +50,7 @@ const Header = () => {
                 smooth={smooth}
                 offset={offset}
                 duration={duration}
-                onClick={handleToggleBurger}
+                onClick={closeMenu}
               >
                 Обо мне
               </Link>
@@ -61,12 +59,12 @@ const Header = () => {
               <Link
                 className={styles.header__nav__list__item__link}
                 href="/"
-                to="about"
+                to="skills"
                 spy={spy}
                 smooth={smooth}
                 offset={offset}
                 duration={duration}
-                onClick={handleToggleBurger}
+                onClick={closeMenu}
               >
                 Навыки
               </Link>
@@ -75,12 +73,12 @@ const Header = () => {
               <Link
                 className={styles.header__nav__list__item__link}
                 href="/"
-                to="about"
+                to="portfolio"
                 spy={spy}
                 smooth={smooth}
                 offset={offset}
                 duration={duration}
-                onClick={handleToggleBurger}
+                onClick={closeMenu}
               >
                 Портфолио
               </Link>
@@ -89,12 +87,12 @@ const Header = () => {
               <Link
                 className={styles.header__nav__list__item__link}
                 href="/"
-                to="about"
+                to="contact"
                 spy={spy}
                 smooth={smooth}
                 offset={offset}
                 duration={duration}
-                onClick={handleToggleBurger}
+                onClick={closeMenu}
               >
                 Обратная связь
               </Link>

@@ -1,6 +1,8 @@
 import {
   hiddenPortfolioItemsArray,
-  portfolioItemsArrAll,
+  portfolioItemsAll,
+  portfolioItemsMobileAll,
+  portfolioItemsReact,
 } from "../../utils/portfolioArr";
 import React, { useState } from "react";
 import MainTitle from "../MainTitile/MainTitle";
@@ -16,7 +18,6 @@ const Portfolio = () => {
 
   const [tab, setTab] = useState({
     tabAll: true,
-    tabStatic: false,
     tabReact: false,
   });
   const [hiddenAllItems, setHiddenAllItems] = useState(true);
@@ -24,27 +25,20 @@ const Portfolio = () => {
     setHiddenAllItems(!hiddenAllItems);
   };
   const showTabAll = () => {
-    setTab({ tabAll: true, tabStatic: false, tabReact: false });
+    setTab({ tabAll: true, tabReact: false });
   };
-  const showTabStatic = () => {
-    setTab({ tabAll: false, tabStatic: true, tabReact: false });
-  };
+
   const showTabReact = () => {
-    setTab({ tabAll: false, tabStatic: false, tabReact: true });
+    setTab({ tabAll: false, tabReact: true });
+    setHiddenAllItems(true)
   };
 
   const tabController = [
     { id: 1, title: "Все проекты", isActive: tab.tabAll, handler: showTabAll },
-    {
-      id: 2,
-      title: "Статические сайты",
-      isActive: tab.tabStatic,
-      handler: showTabStatic,
-    },
-    { id: 3, title: "React", isActive: tab.tabReact, handler: showTabReact },
+    { id: 2, title: "React", isActive: tab.tabReact, handler: showTabReact },
   ];
   return (
-    <section className={styles.portfolio} id="porfolio">
+    <section className={styles.portfolio} id="portfolio">
       <div className="container">
         <MainTitle text="Портфолио" />
       </div>
@@ -63,7 +57,7 @@ const Portfolio = () => {
         </div>
         {!isMobile && (
           <ul className={styles.portfolio__list}>
-            {tab.tabAll && <PortfolioTabContent items={portfolioItemsArrAll} />}
+            {tab.tabAll && <PortfolioTabContent items={portfolioItemsAll} />}
             <AnimatePresence>
               {!hiddenAllItems && (
                 <PortfolioTabContent items={hiddenPortfolioItemsArray} />
@@ -72,14 +66,24 @@ const Portfolio = () => {
           </ul>
         )}
         {!isMobile && (
+          <ul className={styles.portfolio__list}>
+            {tab.tabReact && <PortfolioTabContent items={portfolioItemsReact} />}
+            {/* <AnimatePresence>
+              {!hiddenAllItems && (
+                <PortfolioTabContent items={portfolioItemsReact} />
+              )}
+            </AnimatePresence> */}
+          </ul>
+        )}
+        {!isMobile && (
           <div className={styles.portfolio__wrapper}>
             <button
               className={styles.portfolio__more}
               onClick={toggleHiddenAllItems}
             >
-              <span className={styles.portfolio__more__text}>
+              {!tab.tabReact && <span className={styles.portfolio__more__text}>
                 {!hiddenAllItems ? "Свернуть" : "Показать еще проекты"}
-              </span>
+              </span>}
               <span className={styles.portfolio__more__border} />
             </button>
           </div>
@@ -88,7 +92,8 @@ const Portfolio = () => {
       {isMobile && (
         <div className={styles.portfolio__list__mobile}>
           <div className={styles.portfolio__list__mobile__container}>
-            {tab.tabAll && <PortfolioSlider tabItems={portfolioItemsArrAll} />}
+            {tab.tabAll && <PortfolioSlider tabItems={portfolioItemsMobileAll} />}
+            {tab.tabReact && <PortfolioSlider tabItems={portfolioItemsReact} />}
           </div>
         </div>
       )}
