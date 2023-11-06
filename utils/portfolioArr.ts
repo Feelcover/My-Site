@@ -8,7 +8,7 @@ export const portfolioItemsAll = [
   {
     id: 2,
     img: "/images/sneakers.png",
-    link: "https://sneakers-shop-ja6z.onrender.com/",
+    link: "https://feelcover.github.io/Shop-of-Sneakers/",
     title: "Интернет-магазин «Shop of Sneakers»",
   },
   {
@@ -29,26 +29,26 @@ export const portfolioItemsReact = [
   {
     id: 1,
     img: "/images/sneakers.png",
-    link: "#",
+    link: "https://feelcover.github.io/Shop-of-Sneakers/",
     title: "Интернет-магазин «Shop of Sneakers»",
   },
   {
     id: 2,
     img: "/images/pizza.png",
-    link: "#",
+    link: "https://feelcover.github.io/Pizza-Project/",
     title: "Пиццерия «Pizza Shop»",
   },
 
   {
     id: 3,
     img: "/images/burger.png",
-    link: "#",
+    link: "https://react-burger-swart.vercel.app/",
     title: "Космическая бургерная «Stellar Burgers»",
   },
   {
     id: 4,
     img: "/images/algososh.png",
-    link: "#",
+    link: "https://feelcover.github.io/algososh/",
     title: "Алгоритмические анимации «Algososh»",
   },
 ];
@@ -78,7 +78,7 @@ export const portfolioItemsMobileAll = [
   {
     id: 2,
     img: "/images/sneakers.png",
-    link: "https://sneakers-shop-ja6z.onrender.com/",
+    link: "https://feelcover.github.io/Shop-of-Sneakers/",
     title: "Интернет-магазин «Shop of sneakers»",
   },
   {
