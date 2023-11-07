@@ -168,7 +168,7 @@
 
     &__item {
       &__img {
-        margin-bottom: 32px;
+        margin-bottom: 22px;
         width: 555px;
         height: 422px;
         object-fit: cover;
@@ -274,6 +274,10 @@
 
     @media all and (max-width: 800px) {
       width: calc(100% - 13px);
+      max-height: 139px;
+    }
+    @media all and (max-width: 400px) {
+      max-height: 135px;
     }
 
     &__inner {

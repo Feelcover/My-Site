@@ -73,12 +73,13 @@ const Hero = () => {
             </motion.div>
           </motion.div>
           <motion.div
-            transition={{ delay: 0.6, ease: "linear",
-            duration: 1,
-            x: { duration: 1 }, }}
-            initial={{ x: -1000 }}
-            animate={{ x: 0 }}
-            exit={{ x: 0 }}
+            transition={{
+              delay: 0.8,
+              ease: "linear",
+              duration: 0.5,
+            }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           >
             <div className={styles.hero__description}>
               <p>Вы работаете над чем-то великим?</p>
@@ -89,12 +90,13 @@ const Hero = () => {
             </div>
           </motion.div>
           <motion.div
-            transition={{ delay: 0.9, ease: "linear",
-            duration: 1,
-            x: { duration: 1 }, }}
-            initial={{ x: -1000 }}
-            animate={{ x: 0 }}
-            exit={{ x: 0 }}
+            transition={{
+              delay: 0.9,
+              ease: "linear",
+              duration: 0.5,
+            }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           >
           <Link
             to="contact"

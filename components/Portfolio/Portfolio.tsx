@@ -10,8 +10,9 @@ import PortfolioTab from "./PortfolioTab";
 import PortfolioTabContent from "./PortfolioTabContent";
 import { AnimatePresence } from "framer-motion";
 import { useMediaQuery } from "../../hooks";
-import styles from "./Portfolio.module.scss";
+import { motion } from "framer-motion";
 import PortfolioSlider from "./PortfolioSlider";
+import styles from "./Portfolio.module.scss";
 
 const Portfolio = () => {
   const isMobile = useMediaQuery(1080);
@@ -38,6 +39,15 @@ const Portfolio = () => {
     { id: 2, title: "React", isActive: tab.tabReact, handler: showTabReact },
   ];
   return (
+    <motion.div
+    transition={{
+      delay: 0.2,
+      ease: "linear",
+      duration: 0.5,
+    }}
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+>
     <section className={styles.portfolio} id="portfolio">
       <div className="container">
         <MainTitle text="Портфолио" />
@@ -98,6 +108,7 @@ const Portfolio = () => {
         </div>
       )}
     </section>
+    </motion.div>
   );
 };
 

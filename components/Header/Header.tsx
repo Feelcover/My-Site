@@ -58,7 +58,7 @@ const Header = () => {
             <li className={currentMenuItemClass}>
               <motion.div
                 transition={{
-                  delay: 0.1,
+                  delay: 0.5,
                   ease: "linear",
                   duration: 0.5,
                   x: { duration: 1 },
@@ -84,7 +84,7 @@ const Header = () => {
             <li className={currentMenuItemClass}>
               <motion.div
                 transition={{
-                  delay: 0.2,
+                  delay: 0.6,
                   ease: "linear",
                   duration: 0.5,
                   x: { duration: 1 },
@@ -110,7 +110,7 @@ const Header = () => {
             <li className={currentMenuItemClass}>
               <motion.div
                 transition={{
-                  delay: 0.3,
+                  delay: 0.7,
                   ease: "linear",
                   duration: 0.5,
                   x: { duration: 1 },
@@ -136,7 +136,7 @@ const Header = () => {
             <li className={currentMenuItemClass}>
               <motion.div
                 transition={{
-                  delay: 0.4,
+                  delay: 0.8,
                   ease: "linear",
                   duration: 0.5,
                   x: { duration: 1 },
