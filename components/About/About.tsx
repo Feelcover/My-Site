@@ -3,12 +3,22 @@ import React from "react";
 import Arrow from "../Arrow/Arrow";
 import MainTitle from "../MainTitile/MainTitle";
 import SocialBar from "../SocialBar/SocialBar";
+import { motion } from "framer-motion";
 import styles from "./About.module.scss";
 
 const About = () => {
   const isMobile = useMediaQuery(1080);
 
   return (
+    <motion.div
+    transition={{
+      delay: 0.2,
+      ease: "linear",
+      duration: 0.5,
+    }}
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+>
     <section id="about" className={styles.about}>
       <div className="container">
         <MainTitle text="Обо мне" />
@@ -51,6 +61,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </motion.div>
   );
 };
 

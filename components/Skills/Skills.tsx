@@ -1,10 +1,21 @@
 import React from "react";
 import MainTitle from "../MainTitile/MainTitle";
-import styles from "./Skills.module.scss";
+import { motion } from "framer-motion";
 import SkillsItem from "./SkillsItem";
+import styles from "./Skills.module.scss";
+
 
 const Skills = () => {
   return (
+    <motion.div
+    transition={{
+      delay: 0.2,
+      ease: "linear",
+      duration: 0.5,
+    }}
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+>
     <section className={styles.skills} id="skills">
       <div className="container">
         <MainTitle text="Навыки" />
@@ -34,6 +45,7 @@ const Skills = () => {
         </ul>
       </div>
     </section>
+    </motion.div>
   );
 };
 

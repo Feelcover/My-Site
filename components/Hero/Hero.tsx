@@ -2,6 +2,7 @@ import { useMediaQuery } from "@/hooks";
 import gsap from "gsap";
 import React, { MutableRefObject, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
 import styles from "./Hero.module.scss";
 
 const Hero = () => {
@@ -52,17 +53,49 @@ const Hero = () => {
     >
       <div className="subContainer">
         <div className={styles.hero__inner}>
-          <h1 className={styles.hero__title} ref={title}>
-            Web Development
-          </h1>
-          <div className={styles.hero__description}>
-            <p>
-              Вы работаете над чем-то великим?</p>
-            <p>
-              Я с удовольствием помогу вам в этом! Напишите мне письмо и мы начнем проект прямо сейчас!
-            </p>
-
-          </div>
+          <motion.div
+            transition={{
+              delay: 0.2,
+              ease: "linear",
+              duration: 1,
+            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <motion.div
+              transition={{ delay: 0.5 }}
+              initial={{ y: -1000 }}
+              animate={{ y: 0 }}
+            >
+              <h1 className={styles.hero__title} ref={title}>
+                Web Development
+              </h1>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            transition={{ delay: 0.6, ease: "linear",
+            duration: 1,
+            x: { duration: 1 }, }}
+            initial={{ x: -1000 }}
+            animate={{ x: 0 }}
+            exit={{ x: 0 }}
+          >
+            <div className={styles.hero__description}>
+              <p>Вы работаете над чем-то великим?</p>
+              <p>
+                Я с удовольствием помогу вам в этом! Напишите мне письмо и мы
+                начнем проект прямо сейчас!
+              </p>
+            </div>
+          </motion.div>
+          <motion.div
+            transition={{ delay: 0.9, ease: "linear",
+            duration: 1,
+            x: { duration: 1 }, }}
+            initial={{ x: -1000 }}
+            animate={{ x: 0 }}
+            exit={{ x: 0 }}
+          >
           <Link
             to="contact"
             spy={true}
@@ -73,6 +106,7 @@ const Hero = () => {
           >
             Связаться с разработчиком
           </Link>
+          </motion.div>
           {!isMobile && (
             <Link
               to="about"
