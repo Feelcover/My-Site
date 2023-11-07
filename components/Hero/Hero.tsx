@@ -74,7 +74,7 @@ const Hero = () => {
           </motion.div>
           <motion.div
             transition={{
-              delay: 0.8,
+              delay: 0.7,
               ease: "linear",
               duration: 0.5,
             }}
@@ -91,7 +91,7 @@ const Hero = () => {
           </motion.div>
           <motion.div
             transition={{
-              delay: 0.9,
+              delay: 0.8,
               ease: "linear",
               duration: 0.5,
             }}
