@@ -7,14 +7,16 @@ interface IPortfolioSliderItem {
 }
 
 const PortfolioSliderItem = ({ title, img, link }: IPortfolioSliderItem) => (
+    <a className={styles.portfolio__slide__link} href={link} target="_blank">
     <div className={styles.portfolio__slide}>
-        <a className={styles.portfolio__slide__link} href={link}>
+        
             <span className={styles.portfolio__slide__inner}>
                 <span className={styles.portfolio__slide__text}>{title}</span>
             </span>
             <img className={styles.portfolio__slide__img} src={img} alt={title} />
-        </a>
+        
     </div>
+    </a>
 );
 
 export default PortfolioSliderItem;
