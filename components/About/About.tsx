@@ -12,7 +12,7 @@ const About = () => {
   return (
     <motion.div
     transition={{
-      delay: 0.2,
+      delay: 0.8,
       ease: "linear",
       duration: 0.5,
     }}

@@ -47,6 +47,15 @@ const Hero = () => {
   }, []);
 
   return (
+  <motion.div
+    transition={{
+      delay: 0.3,
+      ease: "linear",
+      duration: 1,
+    }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+  >
     <section
       className={styles.hero}
       style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
@@ -55,7 +64,7 @@ const Hero = () => {
         <div className={styles.hero__inner}>
           <motion.div
             transition={{
-              delay: 0.2,
+              delay: 0.6,
               ease: "linear",
               duration: 1,
             }}
@@ -63,9 +72,10 @@ const Hero = () => {
             animate={{ opacity: 1 }}
           >
             <motion.div
-              transition={{ delay: 0.5 }}
-              initial={{ y: -1000 }}
+              transition={{ delay: 0.7 }}
+              initial={{ y: -900 }}
               animate={{ y: 0 }}
+              
             >
               <h1 className={styles.hero__title} ref={title}>
                 Web Development
@@ -74,7 +84,7 @@ const Hero = () => {
           </motion.div>
           <motion.div
             transition={{
-              delay: 0.7,
+              delay: 0.8,
               ease: "linear",
               duration: 0.5,
             }}
@@ -122,6 +132,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </motion.div>
   );
 };
 

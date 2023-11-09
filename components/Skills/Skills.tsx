@@ -9,7 +9,7 @@ const Skills = () => {
   return (
     <motion.div
     transition={{
-      delay: 0.2,
+      delay: 0.5,
       ease: "linear",
       duration: 0.5,
     }}
