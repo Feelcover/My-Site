@@ -23,42 +23,9 @@ const Footer = () => {
               <Logo />
             </div>
             <div className={styles.footer__right}>
-              <div className={styles.footer__right__bottom}>
-                <ul className={styles.footer__list}>
-                  <li className={styles.footer__list__item}>
-                    <Link href="/cookie-policy" legacyBehavior>
-                      <a className={styles.footer__list__item__link}>
-                        Политика использования файлов cookie
-                      </a>
-                    </Link>
-                  </li>
-                  <li className={styles.footer__list__item}>
-                    <Link href="/privacy-policy" legacyBehavior>
-                      <a className={styles.footer__list__item__link}>
-                        Политика конфиденциальности
-                      </a>
-                    </Link>
-                  </li>
-                  <li className={styles.footer__list__item}>
-                    <Link href="/personal-data-policy" legacyBehavior>
-                      <a className={styles.footer__list__item__link}>
-                        Политика обработки персональных данных
-                      </a>
-                    </Link>
-                  </li>
-                  <li className={styles.footer__list__item}>
-                    <Link href="/personal-data-of-clients" legacyBehavior>
-                      <a className={styles.footer__list__item__link}>
-                        Согласие на обработку персональных данных клиентов -
-                        физических лиц
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
-                <p className={styles.footer__copyright}>
+              <p className={styles.footer__copyright}>
                   © 2023 «Андрей Чебанов»
                 </p>
-              </div>
             </div>
           </div>
         </div>

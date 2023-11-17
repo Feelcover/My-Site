@@ -92,7 +92,7 @@ const ContactForm = () => {
             </a>
           </Link>{" "}
           и даю{" "}
-          <Link legacyBehavior href="/personal-data-of-clients" passHref>
+          <Link legacyBehavior href="/privacy-policy" passHref>
             <a className={styles.contact__checkbox__link}>
               Согласие на обработку персональных данных.
             </a>
