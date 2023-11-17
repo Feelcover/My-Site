@@ -63,7 +63,6 @@
     &__item {
       &:not(:last-child) {
         margin-right: 58px;
-        max-width: 112px;
 
         @media all and (max-width: 1080px) {
           margin-right: 49px;
@@ -173,7 +172,7 @@
       &__img {
         margin-bottom: 22px;
         width: 555px;
-        height: 422px;
+        height: 22px;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
 
@@ -188,8 +187,9 @@
         }
         @media all and (max-width: 1000px) {
           width: 316px;
-          max-height: 195px;
+          min-height: 185px;
         }
+
       }
 
       &__title {
@@ -275,9 +275,14 @@
     @media all and (max-width: 1080px) {
       max-height: 230px;
     }
+    @media all and (max-width: 980px) {
+      max-height: 185px;
+    }
 
     @media all and (max-width: 800px) {
       width: calc(100% - 13px);
+    }
+    @media all and (max-width: 650px) {
       max-height: 139px;
     }
     @media all and (max-width: 400px) {
@@ -292,6 +297,7 @@
       padding: 16px 8px;
       background: rgba(21, 36, 72, 0.2);
       backdrop-filter: blur(50px);
+      
     }
 
     &__text {

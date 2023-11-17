@@ -5,6 +5,7 @@ import Portfolio from "../components/Portfolio/Portfolio";
 import Skills from "../components/Skills/Skills";
 import Layout from "../Layout/Layout";
 import Head from "next/head";
+import Balls from "../components/Balls/Balls";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           href="/images/logo.svg"
         />
       </Head>
+      <Balls/>
       <Layout>
       <main>
         <Hero/>
@@ -30,11 +32,6 @@ export default function Home() {
         <Contact/>
       </main>
       </Layout>
-      <div className="backgroundAnimation">
-        <div id="ballOne"></div>
-        <div id="ballTwo"></div>
-        <div id="ballThree"></div>
-      </div>
     </>
   );
 }
