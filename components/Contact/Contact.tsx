@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <motion.div
       transition={{
-        delay: 0.2,
+        delay: 0.3,
         ease: "linear",
         duration: 0.5,
       }}

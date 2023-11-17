@@ -1,9 +1,9 @@
-import About from "@/components/About/About";
-import Contact from "@/components/Contact/Contact";
-import Header from "@/components/Header/Header";
-import Hero from "@/components/Hero/Hero";
-import Portfolio from "@/components/Portfolio/Portfolio";
-import Skills from "@/components/Skills/Skills";
+import About from "../components/About/About";
+import Contact from "../components/Contact/Contact";
+import Hero from "../components/Hero/Hero";
+import Portfolio from "../components/Portfolio/Portfolio";
+import Skills from "../components/Skills/Skills";
+import Layout from "../Layout/Layout";
 import Head from "next/head";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
           href="/images/logo.svg"
         />
       </Head>
-      <Header />
+      <Layout>
       <main>
         <Hero/>
         <About/>
@@ -29,6 +29,7 @@ export default function Home() {
         <Portfolio/>
         <Contact/>
       </main>
+      </Layout>
       <div className="backgroundAnimation">
         <div id="ballOne"></div>
         <div id="ballTwo"></div>
