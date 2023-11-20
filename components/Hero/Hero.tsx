@@ -9,16 +9,17 @@ const Hero = () => {
   const isMobile = useMediaQuery(800);
   const offGsap = useMediaQuery(400);
   const title = useRef() as MutableRefObject<HTMLHeadingElement>;
+  console.log(offGsap);
 
   useEffect(() => {
-    if (offGsap) {
+    if (!offGsap) {
       const colors = gsap.to(title.current, {
         paused: true,
         duration: 20,
         repeat: -1,
         "--hue": 360,
       });
-  
+
       const doRandom = () => {
         gsap
           .timeline()
@@ -39,9 +40,9 @@ const Hero = () => {
             },
           });
       };
-  
+
       const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-  
+
       if (!mediaQuery || !mediaQuery.matches) {
         colors.play();
         doRandom();
@@ -50,91 +51,90 @@ const Hero = () => {
   }, []);
 
   return (
-  <motion.div
-    transition={{
-      delay: 0.3,
-      ease: "linear",
-      duration: 1,
-    }}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-  >
-    <section
-      className={styles.hero}
-      style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
+    <motion.div
+      transition={{
+        delay: 0.3,
+        ease: "linear",
+        duration: 1,
+      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
     >
-      <div className="subContainer">
-        <div className={styles.hero__inner}>
-          <motion.div
-            transition={{
-              delay: 0.6,
-              ease: "linear",
-              duration: 1,
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
+      <section
+        className={styles.hero}
+        style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
+      >
+        <div className="subContainer">
+          <div className={styles.hero__inner}>
             <motion.div
-              transition={{ delay: 0.7 }}
-              initial={{ y: -900 }}
-              animate={{ y: 0 }}
-              
+              transition={{
+                delay: 0.6,
+                ease: "linear",
+                duration: 1,
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
             >
-              <h1 className={styles.hero__title} ref={title}>
-                Web Development
-              </h1>
+              <motion.div
+                transition={{ delay: 0.7 }}
+                initial={{ y: -900 }}
+                animate={{ y: 0 }}
+              >
+                <h1 className={`${styles.hero__titleMob}`} ref={title}>
+                  Web Development
+                </h1>
+              </motion.div>
             </motion.div>
-          </motion.div>
-          <motion.div
-            transition={{
-              delay: 0.8,
-              ease: "linear",
-              duration: 0.5,
-            }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          >
-            <div className={styles.hero__description}>
-              <p>Вы работаете над чем-то великим?</p>
-              <p>
-                Я с удовольствием помогу вам в этом! Напишите мне письмо и мы
-                начнем проект прямо сейчас!
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            transition={{
-              delay: 0.8,
-              ease: "linear",
-              duration: 0.5,
-            }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          >
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={30}
-            duration={500}
-            className={styles.hero__button}
-          >
-            Связаться с разработчиком
-          </Link>
-          </motion.div>
-          {!isMobile && (
-            <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={30}
-              duration={500}
-              className={styles.hero__arrow}
-            />
-          )}
+            <motion.div
+              transition={{
+                delay: 0.8,
+                ease: "linear",
+                duration: 0.5,
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <div className={styles.hero__description}>
+                <p>Вы работаете над чем-то великим?</p>
+                <p>
+                  Я с удовольствием помогу вам в этом! Напишите мне письмо и мы
+                  начнем проект прямо сейчас!
+                </p>
+              </div>
+            </motion.div>
+            <motion.div
+              transition={{
+                delay: 0.8,
+                ease: "linear",
+                duration: 0.5,
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={30}
+                duration={500}
+                className={styles.hero__button}
+              >
+                Связаться с разработчиком
+              </Link>
+            </motion.div>
+            {!isMobile && (
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={30}
+                duration={500}
+                className={styles.hero__arrow}
+              />
+            )}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </motion.div>
   );
 };
