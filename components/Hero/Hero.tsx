@@ -80,7 +80,7 @@ const Hero = () => {
                 initial={{ y: -900 }}
                 animate={{ y: 0 }}
               >
-                <h1 className={`${styles.hero__titleMob}`} ref={title}>
+                <h1 className={`${offGsap ? styles.hero__titleMob : styles.hero__title}`} ref={title}>
                   Web Development
                 </h1>
               </motion.div>
