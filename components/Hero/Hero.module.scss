@@ -14,6 +14,7 @@
 @media all and (max-width: 485px) {
     height: 477px;
     padding-top: 107px;
+    margin-bottom: 35px;
 }
 
   &__title {
@@ -47,7 +48,7 @@
     }
 
     @media all and (max-width: 485px) {
-        font-size: 42px;
+        font-size: 40px;
         -webkit-text-stroke-color: hsl(var(--hue), 50%, 95%);
       text-shadow: 0 0 15px hsl(var(--hue), 30%, 90%, 0.8),
       0 0 20px hsl(var(--hue), 40%, 80%, 0.85),
@@ -81,7 +82,7 @@
     }
 
     @media all and (max-width: 485px) {
-        font-size: 42px;
+        font-size: 35px;
     }
   }
 
