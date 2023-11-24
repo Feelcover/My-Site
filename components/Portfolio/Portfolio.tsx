@@ -78,22 +78,17 @@ const Portfolio = () => {
         {!isMobile && (
           <ul className={styles.portfolio__list}>
             {tab.tabReact && <PortfolioTabContent items={portfolioItemsReact} />}
-            {/* <AnimatePresence>
-              {!hiddenAllItems && (
-                <PortfolioTabContent items={portfolioItemsReact} />
-              )}
-            </AnimatePresence> */}
           </ul>
         )}
-        {!isMobile && (
+        {!isMobile && !tab.tabReact && (
           <div className={styles.portfolio__wrapper}>
             <button
               className={styles.portfolio__more}
               onClick={toggleHiddenAllItems}
             >
-              {!tab.tabReact && <span className={styles.portfolio__more__text}>
+              <span className={styles.portfolio__more__text}>
                 {!hiddenAllItems ? "Свернуть" : "Показать еще проекты"}
-              </span>}
+              </span>
               <span className={styles.portfolio__more__border} />
             </button>
           </div>

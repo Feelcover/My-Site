@@ -3,25 +3,40 @@ export const portfolioItemsAll = [
     id: 1,
     img: "/images/pizza.png",
     link: "https://feelcover.github.io/Pizza-Project/",
-    title: "Пиццерия «Pizza Shop»",
+    title: "«Pizza Shop»",
   },
   {
     id: 2,
     img: "/images/sneakers.png",
     link: "https://feelcover.github.io/Shop-of-Sneakers/",
-    title: "Интернет-магазин «Shop of Sneakers»",
+    title: "«Shop of Sneakers»",
   },
   {
     id: 3,
-    img: "/images/mesto.png",
-    link: "https://feelcover.github.io/mesto-project/",
-    title: "Фото-блог «Mesto»",
+    img: "/images/wlbex.jpg",
+    link: "https://welbex-seven.vercel.app",
+    title: "«Welbex»",
   },
+
   {
     id: 4,
     img: "/images/travel.png",
     link: "https://feelcover.github.io/russian-travel/",
-    title: "Сайт-журнал «Russian Travel»",
+    title: "«Russian Travel»",
+  },
+];
+export const hiddenPortfolioItemsArray = [
+  {
+    id: 5,
+    img: "/images/mesto.png",
+    link: "https://feelcover.github.io/mesto-project/",
+    title: "«Mesto»",
+  },
+  {
+    id: 6,
+    img: "/images/burger.png",
+    link: "https://react-burger-swart.vercel.app/",
+    title: "Космическая бургерная «Stellar Burgers»",
   },
 ];
 
@@ -30,79 +45,60 @@ export const portfolioItemsReact = [
     id: 1,
     img: "/images/sneakers.png",
     link: "https://feelcover.github.io/Shop-of-Sneakers/",
-    title: "Интернет-магазин «Shop of Sneakers»",
+    title: "«Shop of Sneakers»",
   },
   {
     id: 2,
     img: "/images/pizza.png",
     link: "https://feelcover.github.io/Pizza-Project/",
-    title: "Пиццерия «Pizza Shop»",
+    title: "«Pizza Shop»",
   },
 
   {
     id: 3,
     img: "/images/burger.png",
     link: "https://react-burger-swart.vercel.app/",
-    title: "Космическая бургерная «Stellar Burgers»",
+    title: "«Stellar Burgers»",
   },
   {
     id: 4,
-    img: "/images/algososh.png",
-    link: "https://feelcover.github.io/algososh/",
-    title: "Алгоритмические анимации «Algososh»",
+    img: "/images/wlbex.jpg",
+    link: "https://welbex-seven.vercel.app",
+    title: "«Welbex»",
   },
 ];
 
-export const hiddenPortfolioItemsArray = [
-  {
-    id: 5,
-    img: "/images/burger.png",
-    link: "https://react-burger-swart.vercel.app/",
-    title: "Космическая бургерная «Stellar Burgers»",
-  },
-  {
-    id: 6,
-    img: "/images/algososh.png",
-    link: "https://feelcover.github.io/algososh/",
-    title: "Алгоритмические анимации «Algososh»",
-  },
-];
+
 
 export const portfolioItemsMobileAll = [
   {
     id: 1,
     img: "/images/pizza.png",
     link: "https://feelcover.github.io/Pizza-Project/",
-    title: "Пиццерия «Pizza Shop»",
+    title: "«Pizza Shop»",
   },
   {
     id: 2,
     img: "/images/sneakers.png",
     link: "https://feelcover.github.io/Shop-of-Sneakers/",
-    title: "Интернет-магазин «Shop of sneakers»",
+    title: "«Shop of sneakers»",
   },
   {
     id: 3,
     img: "/images/mesto.png",
     link: "https://feelcover.github.io/mesto-project/",
-    title: "Фото-блог «Mesto»",
+    title: "«Mesto»",
   },
   {
     id: 4,
     img: "/images/travel.png",
     link: "https://feelcover.github.io/russian-travel/",
-    title: "Сайт-журнал «Russian Travel»",
+    title: "«Russian Travel»",
   },
   {
     id: 5,
     img: "/images/burger.png",
     link: "https://react-burger-swart.vercel.app/",
     title: "Космическая бургерная «Stellar Burgers»",
-  },
-  {
-    id: 6,
-    img: "/images/algososh.png",
-    link: "https://feelcover.github.io/algososh/",
-    title: "Алгоритмические анимации «Algososh»",
   },
 ];
