@@ -14,7 +14,7 @@
   }
 
   @media screen and (max-width: 800px) {
-    padding: 20px 0;
+    padding: 12px 0;
   }
 
   &__container {
@@ -101,7 +101,7 @@
 .burgerMenu {
   margin: 0;
   padding: 0;
-  width: 64px;
+  width: 32px;
   height: 30px;
   position: relative;
   cursor: pointer;
@@ -109,8 +109,14 @@
   background-color: transparent;
   border: none;
 
+  @media all and (max-width: 640px) {
+  width: 37px;
+  }
+
   @media all and (max-width: 485px) {
-    height: 40px;
+  width: 28px;
+    height: 14px;
+    margin-bottom: 9px;
   }
 }
 
