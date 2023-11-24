@@ -11,7 +11,6 @@ const Hero = () => {
   const title = useRef() as MutableRefObject<HTMLHeadingElement>;
 
   useEffect(() => {
-    if (!offGsap) {
       const colors = gsap.to(title.current, {
         paused: true,
         duration: 20,
@@ -45,7 +44,6 @@ const Hero = () => {
       if (!mediaQuery || !mediaQuery.matches) {
         colors.play();
         doRandom();
-      }
     }
   }, []);
 
@@ -79,7 +77,7 @@ const Hero = () => {
                 initial={{ y: -900 }}
                 animate={{ y: 0 }}
               >
-                <h1 className={`${offGsap ? styles.hero__titleMob : styles.hero__title}`} ref={title}>
+                <h1 className={styles.hero__title} ref={title}>
                   Web Development
                 </h1>
               </motion.div>
