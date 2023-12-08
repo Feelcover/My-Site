@@ -40,15 +40,12 @@ const About = () => {
             </span>
           </h3>
           <div className={styles.about__text}>
-            <p>
-              Завершил обучение в Яндекс.Практикуме, разрабатывал проекты под
-              руководством менторов и регулярными код-ревью. Так же в копилке
-              есть множество своих проектов.
+            <p>В основоном занимаюсь Frontend разработкой.<br/>
+              Понравились мои работы? <br/> Xотите так же? <br/> Связь со мной по ссылкам ниже.
             </p>
             <p>
-              Стэк: JavaScript/TypeScript (ES6+), React, Next, NodeJS, Express, Nest.
+              Стэк: JS/TS (ES6+), React, Next, NodeJS, Express, Nest.
             </p>
-            <p>Нахожусь в поиске работы и заказов.</p>
           </div>
           <div className={styles.about__social}>
             {!isMobile && <SocialBar />}
