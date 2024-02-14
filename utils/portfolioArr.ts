@@ -102,3 +102,25 @@ export const portfolioItemsMobileAll = [
     title: "Космическая бургерная «Stellar Burgers»",
   },
 ];
+
+export const portfolioItemsAdaptive = [
+  {
+    id: 1,
+    img: "/images/wlbex.jpg",
+    link: "https://welbex-seven.vercel.app",
+    title: "«Welbex»",
+  },
+  {
+    id: 2,
+    img: "/images/travel.png",
+    link: "https://feelcover.github.io/russian-travel/",
+    title: "«Russian Travel»",
+  },
+  {
+    id: 3,
+    img: "/images/semitex.png",
+    link: "https://semitex-five.vercel.app/",
+    title: "«SemiTex»",
+  },
+ 
+];

@@ -1,5 +1,6 @@
 import {
   hiddenPortfolioItemsArray,
+  portfolioItemsAdaptive,
   portfolioItemsAll,
   portfolioItemsMobileAll,
   portfolioItemsReact,
@@ -20,23 +21,28 @@ const Portfolio = () => {
   const [tab, setTab] = useState({
     tabAll: true,
     tabReact: false,
+    tabAdaptive:false
   });
   const [hiddenAllItems, setHiddenAllItems] = useState(true);
   const toggleHiddenAllItems = () => {
     setHiddenAllItems(!hiddenAllItems);
   };
   const showTabAll = () => {
-    setTab({ tabAll: true, tabReact: false });
+    setTab({ tabAll: true, tabReact: false, tabAdaptive:false });
   };
 
   const showTabReact = () => {
-    setTab({ tabAll: false, tabReact: true });
+    setTab({ tabAll: false, tabReact: true, tabAdaptive:false });
     setHiddenAllItems(true)
+  };
+  const showTabAdaptive = () => {
+    setTab({ tabAll: false, tabReact: false, tabAdaptive:true });
   };
 
   const tabController = [
     { id: 1, title: "Все проекты", isActive: tab.tabAll, handler: showTabAll },
     { id: 2, title: "React", isActive: tab.tabReact, handler: showTabReact },
+    { id: 3, title: "Адаптивная вёрстка", isActive: tab.tabAdaptive, handler: showTabAdaptive }
   ];
   return (
     <motion.div
@@ -80,7 +86,12 @@ const Portfolio = () => {
             {tab.tabReact && <PortfolioTabContent items={portfolioItemsReact} />}
           </ul>
         )}
-        {!isMobile && !tab.tabReact && (
+        {!isMobile && (
+          <ul className={styles.portfolio__list}>
+            {tab.tabAdaptive && <PortfolioTabContent items={portfolioItemsAdaptive} />}
+          </ul>
+        )}
+        {!isMobile && !tab.tabReact && !tab.tabAdaptive && (
           <div className={styles.portfolio__wrapper}>
             <button
               className={styles.portfolio__more}
@@ -99,6 +110,7 @@ const Portfolio = () => {
           <div className={styles.portfolio__list__mobile__container}>
             {tab.tabAll && <PortfolioSlider tabItems={portfolioItemsMobileAll} />}
             {tab.tabReact && <PortfolioSlider tabItems={portfolioItemsReact} />}
+            {tab.tabAdaptive && <PortfolioSlider tabItems={portfolioItemsAdaptive} />}
           </div>
         </div>
       )}
