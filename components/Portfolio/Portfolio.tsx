@@ -44,6 +44,7 @@ const Portfolio = () => {
     { id: 2, title: "React", isActive: tab.tabReact, handler: showTabReact },
     { id: 3, title: "Адаптивная вёрстка", isActive: tab.tabAdaptive, handler: showTabAdaptive }
   ];
+  
   return (
     <motion.div
     transition={{
@@ -61,7 +62,7 @@ const Portfolio = () => {
       <div className="subContainer">
         <div className={styles.portfolio__inner}>
           <ul className={styles.portfolio__tabs}>
-            {tabController.map((item) => (
+            {!isMobile && tabController.map((item) => (
               <PortfolioTab
                 key={item.id}
                 title={item.title}
@@ -69,6 +70,14 @@ const Portfolio = () => {
                 handleShowTab={item.handler}
               />
             ))}
+                        {isMobile && (
+              <PortfolioTab
+                key={1}
+                title="Адаптивные версии"
+                isActive={tab.tabAdaptive}
+                handleShowTab={tabController[2].handler}
+              />
+            )}
           </ul>
         </div>
         {!isMobile && (
@@ -108,8 +117,6 @@ const Portfolio = () => {
       {isMobile && (
         <div className={styles.portfolio__list__mobile}>
           <div className={styles.portfolio__list__mobile__container}>
-            {tab.tabAll && <PortfolioSlider tabItems={portfolioItemsMobileAll} />}
-            {tab.tabReact && <PortfolioSlider tabItems={portfolioItemsReact} />}
             {tab.tabAdaptive && <PortfolioSlider tabItems={portfolioItemsAdaptive} />}
           </div>
         </div>
