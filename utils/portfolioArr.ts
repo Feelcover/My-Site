@@ -71,12 +71,6 @@ export const portfolioItemsReact = [
     img: "/images/wlbex.jpg",
     link: "https://welbex-seven.vercel.app",
     title: "«Welbex»",
-  },
-    {
-    id: 4,
-    img: "/images/travel.png",
-    link: "https://feelcover.github.io/russian-travel/",
-    title: "«Russian Travel»",
   }
 ];
 

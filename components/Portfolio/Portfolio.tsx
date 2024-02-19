@@ -98,6 +98,7 @@ const Portfolio = () => {
         {!isMobile && (
           <ul className={styles.portfolio__list}>
             {tab.tabAdaptive && <PortfolioTabContent items={portfolioItemsAdaptive} />}
+            
           </ul>
         )}
         {!isMobile && !tab.tabReact && !tab.tabAdaptive && (
