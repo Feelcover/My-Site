@@ -5,7 +5,7 @@ import {
   portfolioItemsMobileAll,
   portfolioItemsReact,
 } from "../../utils/portfolioArr";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MainTitle from "../MainTitile/MainTitle";
 import PortfolioTab from "./PortfolioTab";
 import PortfolioTabContent from "./PortfolioTabContent";
@@ -23,6 +23,12 @@ const Portfolio = () => {
     tabReact: false,
     tabAdaptive:false
   });
+  useEffect(()=>{
+    if (isMobile) {
+      showTabAdaptive()
+    }
+  },[isMobile])
+  
   const [hiddenAllItems, setHiddenAllItems] = useState(true);
   const toggleHiddenAllItems = () => {
     setHiddenAllItems(!hiddenAllItems);
