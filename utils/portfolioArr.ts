@@ -2,7 +2,7 @@ export const portfolioItemsAll = [
   {
     id: 1,
     img: "/images/pizza.png",
-    link: "https://feelcover.github.io/Pizza-Project/",
+    link: "https://pizza-project-drab.vercel.app/",
     title: "«Pizza Shop»",
   },
   {
@@ -56,7 +56,7 @@ export const portfolioItemsReact = [
   {
     id: 2,
     img: "/images/pizza.png",
-    link: "https://feelcover.github.io/Pizza-Project/",
+    link: "https://pizza-project-drab.vercel.app/",
     title: "«Pizza Shop»",
   },
 
