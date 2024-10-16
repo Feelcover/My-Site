@@ -8,7 +8,7 @@ export const portfolioItemsAll = [
   {
     id: 2,
     img: "/images/sneakers.png",
-    link: "https://feelcover.github.io/Shop-of-Sneakers/",
+    link: "https://shop-of-sneakers.vercel.app/",
     title: "«Shop of Sneakers»",
   },
   {
@@ -50,7 +50,7 @@ export const portfolioItemsReact = [
   {
     id: 1,
     img: "/images/sneakers.png",
-    link: "https://feelcover.github.io/Shop-of-Sneakers/",
+    link: "https://shop-of-sneakers.vercel.app/",
     title: "«Shop of Sneakers»",
   },
   {

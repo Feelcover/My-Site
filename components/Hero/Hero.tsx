@@ -9,6 +9,7 @@ const Hero = () => {
   const isMobile = useMediaQuery(800);
   const offGsap = useMediaQuery(400);
   const title = useRef() as MutableRefObject<HTMLHeadingElement>;
+  console.log(isMobile);
   
 
   useEffect(() => {
